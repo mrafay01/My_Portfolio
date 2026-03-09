@@ -9,6 +9,7 @@ export default function ParticleBackground() {
     if (!containerRef.current) return;
 
     const canvas = document.createElement('canvas');
+    canvas.style.pointerEvents = 'none';
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
@@ -27,7 +28,7 @@ export default function ParticleBackground() {
     }
 
     const particles: Particle[] = [];
-    const particleCount = 60;
+    const particleCount = 50;
     const colors = ['#dc143c', '#ff2d55', '#9b111e'];
 
     // Initialize particles
@@ -106,7 +107,7 @@ export default function ParticleBackground() {
         const dx = mouseX - particle.x;
         const dy = mouseY - particle.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
-        const minDistance = 250;
+        const minDistance = 200;
 
         if (distance < minDistance) {
           const angle = Math.atan2(dy, dx);
@@ -174,7 +175,7 @@ export default function ParticleBackground() {
   return (
     <div
       ref={containerRef}
-      className="fixed inset-0 z-0 bg-background overflow-hidden"
+      className="fixed inset-0 z-0 bg-background overflow-hidden pointer-events-none"
     />
   );
 }

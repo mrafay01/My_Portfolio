@@ -1,8 +1,15 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import ScrollReveal from './ScrollReveal';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink, Github, Eye } from 'lucide-react';
+import { useState } from 'react';
+import ProjectDetailsModal from './ProjectDetailsModal';
+
+interface ProjectDetail {
+  image: string;
+  description: string;
+}
 
 interface Project {
   title: string;
@@ -12,6 +19,7 @@ interface Project {
   image?: string;
   liveLink?: string;
   githubLink?: string;
+  details?: ProjectDetail[];
 }
 
 const projects: Project[] = [
@@ -28,6 +36,69 @@ const projects: Project[] = [
     ],
     githubLink: 'https://github.com/mrafay01/Online-Quran-Tutor',
     image: '/oqt.png', // Placeholder
+    details: [
+      {
+        image: '/dashboard.png',
+        description: 'A sophisticated control center designed for administrative efficiency. It provides a real-time high-level overview of system metrics, active sessions, and user performance at a glance, enabling data-driven decision making.'
+      },
+      {
+        image: '/progress.png',
+        description: 'Empowering students with visual feedback through dynamic progress charts. This module tracks individual learning trajectories, curriculum mastery, and attendance patterns, ensuring transparency and motivation throughout the educational journey.'
+      },
+      {
+        image: '/swapping.png',
+        description: 'Engineered for flexibility, our advanced session management system allows for seamless tutor re-assignment and schedule adjustments. This resilient architecture ensures zero downtime and maintains session continuity during peak demand.'
+      },
+      {
+        image: '/quran.png',
+        description: 'The digital heartbeat of the platform—an interactive Quran viewer featuring high-fidelity typography, integrated highlighting, and context-aware study tools. Designed for an immersive and respectful digital learning experience.'
+      },
+      {
+        image: '/schedule.png',
+        description: 'A high-performance calendar engine capable of synchronizing sessions across multiple time zones. It features intuitive drag-and-drop rescheduling, automated conflict detection, and smart notifications for both students and tutors.'
+      }
+    ]
+  },
+  {
+    title: 'UR Finance - Expense Tracker App',
+    description: 'Expense tracker app with real-time expense tracking, budget management, category organization, data visualization, and data export features.',
+    technologies: ['Next.js', 'Tailwind CSS', 'TypeScript', 'MongoDB'],
+    features: [
+      'Real-time expense tracking',
+      'Budget management',
+      'Category organization',
+      'Data visualization',
+      'Data export',
+    ],
+    liveLink: 'https://expense-tracker-green-alpha-78.vercel.app/',
+    githubLink: 'https://github.com/mrafay01/expense-tracker',
+    image: '/expense.png', // Placeholder
+    details: [
+      {
+        image: '/budget.png',
+        description: 'A precise financial planning interface that allows users to set and monitor spending limits across various categories. The system provides real-time progress indicators and alerts, ensuring users stay within their financial boundaries while promoting disciplined saving habits.'
+      },
+      {
+        image: '/debts.png',
+        description: 'A dedicated module for tracking liabilities and repayment schedules. It offers a clear visualization of outstanding balances, interest rates, and payment history, empowering users to strategically manage and eliminate debt through organized tracking.'
+      },
+      {
+        image: '/expense.png',
+        description: 'The core transactional hub where users can instantly record and categorize new expenditures. Features an intuitive entry system with support for custom tagging, merchant details, and date-stamping for granular financial record-keeping.'
+      },
+      {
+        image: '/reports.png',
+        description: 'Advanced data visualization engine that transforms raw financial data into actionable insights. Through dynamic charts and spending breakdowns, users can analyze their consumption patterns over time, identifying areas for potential savings and financial optimization.'
+      },
+      {
+        image: '/transaction.png',
+        description: 'A high-fidelity ledger displaying a comprehensive history of all financial activities. Includes powerful filtering and search capabilities, allowing users to quickly audit past spends, verify payment details, and maintain an accurate digital paper trail.'
+      },
+      {
+        image: '/settings.png',
+        description: 'Granular configuration panel for personalizing the application experience. Users can manage account preferences, customize currency settings, organize categories, and tune notification parameters to align the tool with their specific financial workflow.'
+      }
+    ]
   },
   {
     title: 'T-Plus Technologies Website',
@@ -41,6 +112,7 @@ const projects: Project[] = [
       'SEO optimized',
     ],
     liveLink: 'https://tplustechnologies.com',
+    githubLink: 'https://github.com/mrafay01/tplus',
     image: '/tplus.png', // Placeholder
   },
   {
@@ -102,6 +174,9 @@ const projects: Project[] = [
 ];
 
 export default function ProjectsSection() {
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -131,7 +206,7 @@ export default function ProjectsSection() {
               The <span className="text-primary italic">Portfolios</span>
             </h2>
             <div className="hidden sm:block h-px flex-grow mx-8 bg-gradient-to-r from-primary/20 to-transparent" />
-            <span className="text-[10px] font-black uppercase tracking-[0.3em] text-foreground/20">Selected Works</span>
+            <span className="text-xs font-black uppercase tracking-[0.3em] text-foreground/50">Selected Works</span>
           </div>
         </ScrollReveal>
 
@@ -159,7 +234,7 @@ export default function ProjectsSection() {
                 <h3 className="text-base font-black text-foreground mb-1.5 group-hover:text-primary transition-colors tracking-tight">
                   {project.title}
                 </h3>
-                <p className="text-[11px] text-foreground/60 leading-relaxed mb-4 line-clamp-3 font-light">
+                <p className="text-[13px] text-foreground/80 leading-relaxed mb-4 line-clamp-3 font-light">
                   {project.description}
                 </p>
 
@@ -168,7 +243,7 @@ export default function ProjectsSection() {
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="text-[9px] font-bold px-2 py-1 rounded bg-white/5 border border-white/20 text-foreground/40 group-hover:border-primary/40 transition-colors"
+                      className="text-[11px] font-bold px-2 py-1 rounded bg-white/5 border border-white/20 text-foreground/70 group-hover:border-primary/40 transition-colors"
                     >
                       {tech}
                     </span>
@@ -184,7 +259,7 @@ export default function ProjectsSection() {
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                     />
                   ) : (
-                    <div className="w-full h-full bg-white/[0.03] flex items-center justify-center text-[10px] uppercase font-black tracking-widest text-foreground/10">
+                    <div className="w-full h-full bg-white/[0.03] flex items-center justify-center text-xs uppercase font-black tracking-widest text-foreground/40">
                       Project Visualization
                     </div>
                   )}
@@ -199,7 +274,7 @@ export default function ProjectsSection() {
                       href={project.liveLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="interactive text-[9px] font-black uppercase tracking-widest text-primary hover:text-primary-glow flex items-center gap-1 transition-all"
+                      className="p-1 interactive text-[11px] font-black uppercase tracking-widest text-primary border border-transparent hover:border-primary rounded-[6px] transition-all duration-300 flex items-center gap-1"
                     >
                       Live <ExternalLink size={9} />
                     </a>
@@ -209,16 +284,33 @@ export default function ProjectsSection() {
                       href={project.githubLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="interactive text-[9px] font-black uppercase tracking-widest text-foreground/30 hover:text-foreground flex items-center gap-1 transition-all"
+                      className="p-1 interactive text-[11px] font-black uppercase tracking-widest text-gray-100 border border-transparent hover:text-white hover:border-gray-200 rounded-[6px] transition-all duration-300 flex items-center gap-1"
                     >
                       Source <Github size={9} />
                     </a>
+                  )}
+                  {project.details && (
+                    <button
+                      onClick={() => {
+                        setSelectedProject(project);
+                        setIsModalOpen(true);
+                      }}
+                      className="p-1 interactive text-[11px] font-black uppercase tracking-widest text-primary border border-transparent hover:border-primary rounded-[8px] transition-all duration-300 flex items-center gap-1"
+                    >
+                      View <Eye size={9} />
+                    </button>
                   )}
                 </div>
               </div>
             </motion.div>
           ))}
         </motion.div>
+
+        <ProjectDetailsModal
+          project={selectedProject}
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+        />
       </div>
     </section>
   );

@@ -17,7 +17,7 @@ export default function AboutSection() {
               </h2>
               <div className="h-px flex-grow bg-gradient-to-r from-primary/20 to-transparent" />
             </div>
-            <p className="text-[10px] text-foreground/30 font-black uppercase tracking-[0.3em] leading-relaxed">
+            <p className="text-[11px] text-foreground/50 font-black uppercase tracking-[0.3em] leading-relaxed">
               Architecting digital depth
             </p>
           </ScrollReveal>
@@ -26,7 +26,7 @@ export default function AboutSection() {
           <div className="w-full">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
               <ScrollReveal direction="right">
-                <p className="text-base md:text-lg text-foreground/70 font-light leading-relaxed">
+                <p className="text-base md:text-lg text-foreground/80 font-light leading-relaxed">
                   I'm a <span className="text-primary font-bold">Full-Stack Engineer</span> who believes code is a medium for art. I specialize in merging technical rigor with creative fluidity to build meaningful digital experiences.
                 </p>
               </ScrollReveal>
@@ -45,8 +45,8 @@ export default function AboutSection() {
                         {stat.icon}
                       </div>
                       <div className="text-lg font-black text-primary mb-0.5" style={{ textShadow: '0 0 10px rgba(255, 0, 68, 0.3)' }}>{stat.value}</div>
-                      <div className="text-[9px] uppercase tracking-widest text-foreground/60 font-black">{stat.label}</div>
-                      <div className="text-[8px] uppercase tracking-widest text-primary font-bold">{stat.sub}</div>
+                      <div className="text-[11px] uppercase tracking-widest text-foreground/70 font-black">{stat.label}</div>
+                      <div className="text-[10px] uppercase tracking-widest text-primary font-bold">{stat.sub}</div>
                     </motion.div>
                   </ScrollReveal>
                 ))}
@@ -55,7 +55,7 @@ export default function AboutSection() {
 
             <ScrollReveal delay={0.2} className="mt-8">
               <div className="p-4 border-l-2 border-primary/20 bg-primary/[0.01] rounded-r-lg group hover:bg-primary/[0.02] hover:border-primary/60 transition-colors max-w-2xl">
-                <p className="text-xs text-foreground/50 italic leading-relaxed font-light hover:text-foreground/80 transition-colors">
+                <p className="text-[13px] text-foreground/70 italic leading-relaxed font-light hover:text-foreground/90 transition-colors">
                   "Great code isn't just functional, it's predictable, scalable, and inherently beautiful in its structure."
                 </p>
               </div>

@@ -113,7 +113,7 @@ export default function ExperienceSection() {
 
               {/* Date Side */}
               <div className="lg:col-span-3">
-                <span className="text-[11px] font-black uppercase tracking-[0.2em] text-primary">
+                <span className="text-xs font-black uppercase tracking-[0.2em] text-primary">
                   {exp.period}
                 </span>
               </div>
@@ -123,13 +123,13 @@ export default function ExperienceSection() {
                 <h3 className="text-sm font-black text-foreground group-hover:text-primary transition-colors tracking-tight">
                   {exp.title}
                 </h3>
-                <div className="text-[9px] font-bold text-foreground/30 uppercase tracking-widest mb-3">
+                <div className="text-[11px] font-bold text-foreground/50 uppercase tracking-widest mb-3">
                   {exp.company} • {exp.location}
                 </div>
                 <ul className="space-y-1.5">
                   {exp.description.map((point, idx) => (
-                    <li key={idx} className="text-[11px] text-foreground/50 leading-relaxed flex items-start gap-2">
-                      <span className="text-primary/40 mt-1">/</span>
+                    <li key={idx} className="text-[12px] text-foreground/70 leading-relaxed flex items-start gap-2">
+                      <span className="text-primary/60 mt-1">/</span>
                       {point}
                     </li>
                   ))}
