@@ -171,6 +171,37 @@ const projects: Project[] = [
     image: '/seezuna.png', // Placeholder
     githubLink: 'https://github.com/mrafay01/seezuna-website',
   },
+  {
+    title: 'ESP32 Snooker Break Detector',
+    description: 'An intelligent hardware project utilizing the ESP32-CAM to detect snooker breaks. Initially prototyped with Python and YOLOv8, the system was optimized for hardware constraints using advanced trigonometry to detect the red ball triangle and its subsequent break to maintain an automated counter.',
+    technologies: ['C++', 'Python', 'YOLOv8', 'ESP32-CAM', 'Computer Vision'],
+    features: [
+      'Real-time snooker break detection',
+      'Automated game break counter',
+      'Geometric and trigonometric ball detection',
+      'Hardware-optimized visual processing',
+      'ESP32-CAM integration',
+    ],
+    image: 'https://images.unsplash.com/photo-1534463868211-1203a5c900a9?q=80&w=1000&auto=format&fit=crop',
+    details: [
+      {
+        image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1000&auto=format&fit=crop',
+        description: 'Hardware Integration: Deployed on the ESP32-CAM microcontroller, this module captures real-time video feeds of the snooker table. By leveraging hardware-optimized processing, the system efficiently handles image streaming and on-device calculations despite strict memory and performance constraints.'
+      },
+      {
+        image: 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=1000&auto=format&fit=crop',
+        description: 'AI & Data Processing: Originally prototyped using Python and YOLOv8 for robust object detection. This phase laid the groundwork for understanding ball trajectories and the physics of the break, ensuring that the final mathematical model was grounded in accurate visual data.'
+      },
+      {
+        image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=1000&auto=format&fit=crop',
+        description: 'Mathematical Model & Trigonometry: To bypass the memory limits of the ESP32, the AI strategy was pivoted to a highly efficient mathematical approach. By applying basic trigonometry, the system maps out the red balls, identifies the standard triangle formation, and detects when a break disrupts this geometric arrangement.'
+      },
+      {
+        image: 'https://images.unsplash.com/photo-1502570149819-b2260483d302?q=80&w=1000&auto=format&fit=crop',
+        description: 'Automated Event Counter: The culmination of the image capture and geographic mapping is a precise, automated counter. When a break occurs, the system registers the exact frame of the split, securely incrementing the break tracking logic for real-time game analysis.'
+      }
+    ]
+  },
 ];
 
 export default function ProjectsSection() {

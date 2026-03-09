@@ -104,18 +104,18 @@ export default function StickyTabs() {
                             {activeTab === tab.id && (
                                 <motion.div
                                     layoutId="activeTabBg"
-                                    className="absolute inset-0 bg-gradient-to-br from-primary via-[#ff2d55] to-[#c70039] shadow-[0_0_20px_rgba(255,0,68,0.4)]"
+                                    className="absolute inset-0 bg-primary/50 backdrop-blur-md shadow-[0_0_20px_rgba(255,0,0,0.3)] ring-1 ring-primary/60"
                                     transition={{ type: "spring", stiffness: 300, damping: 30 }}
                                 >
                                     {/* Base Shine */}
                                     <div className="absolute inset-0 bg-gradient-to-tr from-white/40 via-transparent to-transparent opacity-40 pointer-events-none" />
 
-                                    {/* Animated Highlight Beam */}
-                                    <motion.div
-                                        className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-[-25deg]"
-                                        animate={{ x: ['-150%', '150%'] }}
-                                        transition={{ duration: 2.5, repeat: Infinity, ease: "linear" }}
-                                    />
+                                    {/* Animated Highlight Beam
+                                        <motion.div
+                                            className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-[-25deg]"
+                                            animate={{ x: ['-150%', '150%'] }}
+                                            transition={{ duration: 2.5, repeat: Infinity, ease: "linear" }}
+                                        /> */}
 
                                     {/* Glass Structure Layers */}
                                     <div className="absolute inset-0 shadow-[inset_0_0_12px_rgba(255,255,255,0.3)] rounded-xl border-t border-white/30" />

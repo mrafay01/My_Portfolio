@@ -7,14 +7,14 @@
   /* Neon Crimson - Vibrant, Professional, and Modern */
   --background: #020202;
   --foreground: #ffffff;
-  --primary: #ff0044;
-  --primary-glow: #ff2d55;
-  --secondary: #9b111e;
-  --secondary-glow: #e32636;
-  --accent: #ff4d4d;
+  --primary: #ff0000;
+  --primary-glow: #ff3333;
+  --secondary: #990000;
+  --secondary-glow: #cc0000;
+  --accent: #ff0000;
   --accent-glow: #ff0000;
-  --border: rgba(255, 0, 68, 0.2);
-  --text-selection-bg: #ff0044;
+  --border: rgba(255, 0, 0, 0.2);
+  --text-selection-bg: #ff0000;
   --text-selection-color: #ffffff;
   --radius: 0.5rem;
 }
@@ -22,14 +22,14 @@
 .dark {
   --background: #030303;
   --foreground: #ffffff;
-  --primary: #ff0044;
-  --primary-glow: #ff0000;
+  --primary: #ff0000;
+  --primary-glow: #ff3333;
   --secondary: #4a0000;
-  --secondary-glow: #b22222;
-  --accent: #ff3333;
+  --secondary-glow: #cc0000;
+  --accent: #ff0000;
   --accent-glow: #ff0000;
-  --border: rgba(255, 0, 68, 0.2);
-  --text-selection-bg: #ff0044;
+  --border: rgba(255, 0, 0, 0.2);
+  --text-selection-bg: #ff0000;
   --text-selection-color: #ffffff;
 }
 
@@ -46,16 +46,16 @@
 }
 
 .neon-text {
-  text-shadow: 0 0 5px var(--primary), 0 0 10px var(--primary), 0 0 15px rgba(255, 0, 68, 0.3);
+  text-shadow: 0 0 5px var(--primary), 0 0 10px var(--primary), 0 0 15px rgba(255, 0, 0, 0.3);
 }
 
 .neon-border {
   border-color: var(--primary);
-  box-shadow: 0 0 5px var(--primary), 0 0 10px rgba(255, 0, 68, 0.2);
+  box-shadow: 0 0 5px var(--primary), 0 0 10px rgba(255, 0, 0, 0.2);
 }
 
 .neon-box {
-  box-shadow: 0 0 10px rgba(255, 0, 68, 0.3), inset 0 0 5px rgba(255, 0, 68, 0.1);
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.3), inset 0 0 5px rgba(255, 0, 0, 0.1);
 }
 
 @keyframes glow-pulse {
@@ -74,13 +74,13 @@
 
   0%,
   100% {
-    border-color: rgba(220, 20, 60, 0.4);
-    box-shadow: 0 0 10px rgba(220, 20, 60, 0.2);
+    border-color: rgba(255, 0, 0, 0.4);
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
   }
 
   50% {
-    border-color: rgba(220, 20, 60, 0.7);
-    box-shadow: 0 0 20px rgba(220, 20, 60, 0.4);
+    border-color: rgba(255, 0, 0, 0.7);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
   }
 }
 
@@ -122,15 +122,15 @@
 
 @keyframes cursor-glow {
   0% {
-    box-shadow: 0 0 10px rgba(220, 20, 60, 0.7), 0 0 20px rgba(220, 20, 60, 0.3);
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.7), 0 0 20px rgba(255, 0, 0, 0.3);
   }
 
   50% {
-    box-shadow: 0 0 20px rgba(220, 20, 60, 0.9), 0 0 30px rgba(220, 20, 60, 0.5);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.9), 0 0 30px rgba(255, 0, 0, 0.5);
   }
 
   100% {
-    box-shadow: 0 0 10px rgba(220, 20, 60, 0.7), 0 0 20px rgba(220, 20, 60, 0.3);
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.7), 0 0 20px rgba(255, 0, 0, 0.3);
   }
 }
 

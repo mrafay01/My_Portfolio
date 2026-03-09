@@ -56,7 +56,7 @@ export default function Sidebar() {
 
             {/* Profile Header */}
             <motion.div variants={itemVariants} className="space-y-6 flex flex-col items-center lg:items-start w-full">
-                <div className="relative w-32 h-32 md:w-36 md:h-36 rounded-3xl overflow-hidden border-2 border-primary/20 p-2 backdrop-blur-sm group shadow-[0_0_30px_rgba(220,20,60,0.2)]">
+                <div className="relative w-32 h-32 md:w-36 md:h-36 rounded-3xl overflow-hidden border-2 border-primary/20 p-2 backdrop-blur-sm group shadow-[0_0_30px_rgba(255,0,0,0.2)]">
                     <div className="w-full h-full rounded-2xl overflow-hidden relative">
                         <div className="absolute inset-0 group-hover:bg-transparent transition-colors duration-500 z-10" />
                         <img
@@ -76,7 +76,7 @@ export default function Sidebar() {
                             onClick={() => {
                                 document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
                             }}
-                            className="group relative flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary/10 border border-primary/20 hover:bg-primary hover:border-primary transition-all duration-300 shadow-[0_0_15px_rgba(255,0,68,0.15)] hover:shadow-[0_0_25px_rgba(255,0,68,0.5)] overflow-hidden shrink-0"
+                            className="group relative flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary/10 border border-primary/20 hover:bg-primary hover:border-primary transition-all duration-300 shadow-[0_0_15px_rgba(255,0,0,0.15)] hover:shadow-[0_0_25px_rgba(255,0,0,0.5)] overflow-hidden shrink-0"
                             title="Send a Signal"
                         >
                             <div className="absolute inset-0 bg-gradient-to-tr from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

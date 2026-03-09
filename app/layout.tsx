@@ -1,11 +1,10 @@
 import type { Metadata } from 'next'
-import { Inter, Geist_Mono } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 import CustomCursor from '@/components/CustomCursor'
 
 const inter = Inter({ subsets: ["latin"] });
-const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: 'Abdul Rafe - Full Stack Developer',
@@ -13,20 +12,7 @@ export const metadata: Metadata = {
   generator: 'v0.app',
   keywords: 'developer, portfolio, react, next.js, full-stack, web development',
   icons: {
-    icon: [
-      {
-        url: '/favicon.ico',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/favicon.ico',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/favicon.ico',
-        type: 'image/svg+xml',
-      },
-    ],
+    icon: '/favicon.ico',
     apple: '/favicon.ico',
   },
 }

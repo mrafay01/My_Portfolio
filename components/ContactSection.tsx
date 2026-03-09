@@ -184,7 +184,7 @@ export default function ContactSection() {
                     className={`interactive w-full py-2.5 text-foreground text-[11px] font-black uppercase tracking-[0.4em] rounded-lg transition-all flex items-center justify-center gap-2 group ${status === 'loading' ? 'bg-primary/50 cursor-not-allowed' :
                       status === 'success' ? 'bg-green-600 shadow-[0_0_15px_rgba(22,163,74,0.3)]' :
                         status === 'error' ? 'bg-red-600 shadow-[0_0_15px_rgba(220,38,38,0.3)]' :
-                          'bg-primary hover:shadow-[0_0_15px_rgba(220,20,60,0.3)] hover:scale-[1.01]'
+                          'bg-primary hover:shadow-[0_0_15px_rgba(255,0,0,0.3)] hover:scale-[1.01]'
                       }`}
                   >
                     {status === 'loading' ? 'Transmitting...' :
