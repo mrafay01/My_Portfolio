@@ -44,7 +44,7 @@ export default function AboutSection() {
                       <div className="absolute top-2 right-2 text-primary/20 group-hover:text-primary/40 transition-colors">
                         {stat.icon}
                       </div>
-                      <div className="text-lg font-black text-primary mb-0.5" style={{ textShadow: '0 0 10px rgba(255, 0, 0, 0.3)' }}>{stat.value}</div>
+                      <div className="text-lg font-black text-primary mb-0.5" style={{ textShadow: '0 0 10px rgba(59, 130, 246, 0.3)' }}>{stat.value}</div>
                       <div className="text-[11px] uppercase tracking-widest text-foreground/70 font-black">{stat.label}</div>
                       <div className="text-[10px] uppercase tracking-widest text-primary font-bold">{stat.sub}</div>
                     </motion.div>

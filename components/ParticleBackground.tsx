@@ -29,7 +29,7 @@ export default function ParticleBackground() {
 
     const particles: Particle[] = [];
     const particleCount = 50;
-    const colors = ['#ff0000', '#ff3333', '#cc0000'];
+    const colors = ['#3B82F6', '#06B6D4', '#2250c5ff'];
 
     // Initialize particles
     for (let i = 0; i < particleCount; i++) {
@@ -54,7 +54,7 @@ export default function ParticleBackground() {
     window.addEventListener('mousemove', handleMouseMove);
 
     const animate = () => {
-      ctx.fillStyle = '#020202';
+      ctx.fillStyle = '#0F172A';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       // Update and draw particles
@@ -91,7 +91,7 @@ export default function ParticleBackground() {
 
           if (distance < 220) {
             ctx.strokeStyle = particles[i].color;
-            ctx.lineWidth = 1;
+            ctx.lineWidth = 1.5;
             ctx.globalAlpha = 0.3 * (1 - distance / 220);
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
