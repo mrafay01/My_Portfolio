@@ -33,7 +33,7 @@ export default function AboutSection() {
 
               <div className="grid grid-cols-2 gap-3">
                 {[
-                  { label: 'Excellence', value: '2+ Years', sub: 'Experience', icon: <Rocket size={12} /> },
+                  { label: 'Excellence', value: '3+ Years', sub: 'Experience', icon: <Rocket size={12} /> },
                   { label: 'Craft', value: '15+ Projects', sub: 'Completed', icon: <Zap size={12} /> }
                 ].map((stat, i) => (
                   <ScrollReveal key={i} delay={0.1 * i}>

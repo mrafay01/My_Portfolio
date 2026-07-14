@@ -116,6 +116,20 @@ const projects: Project[] = [
     image: '/tplus.png', // Placeholder
   },
   {
+    title: 'Portfolio for Client',
+    description: 'Portfolio website for Sarah, a construction details expert, featuring clean animations, modern components, and responsive design for showcasing her services and projects.',
+    technologies: ['HTML', 'Tailwind CSS', 'JavaScript', 'Cloudinary', 'PebblePad'],
+    features: [
+      'Smooth scroll animations',
+      'Interactive components',
+      'Responsive design',
+      'Professional UI/UX',
+      'SEO optimized',
+    ],
+    liveLink: 'https://sarah-cullinane-portfolio-pebblepad.netlify.app/',
+    image: '/sarah_1.png', // Placeholder
+  },
+  {
     title: 'Stellar Talent HR Website',
     description: 'Static website for HR recruitment company with engaging animations and interactive JavaScript components for enhanced user experience.',
     technologies: ['HTML', 'CSS', 'JavaScript'],

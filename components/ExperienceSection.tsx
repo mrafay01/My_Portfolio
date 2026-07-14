@@ -25,10 +25,10 @@ const experiences: Experience[] = [
     ],
   },
   {
-    title: 'Web Developer Intern',
+    title: 'Full Stack Web Developer',
     company: 'T-Plus Technologies',
     location: 'Islamabad, Pakistan',
-    period: 'Oct 2025 – Jan 2026',
+    period: 'Jun 2025 – Jan 2026',
     description: [
       'Contributed to multiple web-based projects using Next.js, React.js, and Node.js with emphasis on high-performance, scalable UIs',
       'Actively participated in designing reusable components and optimizing application performance',
@@ -40,7 +40,7 @@ const experiences: Experience[] = [
     title: 'Web Developer Intern',
     company: 'Care Pvt. Ltd.',
     location: 'Islamabad, Pakistan',
-    period: 'Sep 2025 – Oct 2025',
+    period: 'Mar 2025 – Jun 2025',
     description: [
       'Designed and developed a web application to remotely control and monitor an ESP-powered mechanical device',
       'Implemented real-time I/O handling, live status dashboards, and secure communication protocols',
